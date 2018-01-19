@@ -18,15 +18,19 @@ namespace detail
 {
 // This doesn't detect inherited member functions!
 // http://stackoverflow.com/questions/1966362/sfinae-to-check-for-inherited-member-functions
+// https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error
+// 检测T::no_destroy是否存在
 template<typename T>
 struct has_no_destroy
 {
 #ifdef __GXX_EXPERIMENTAL_CXX0X__
   template <typename C> static char test(decltype(&C::no_destroy));
 #else
-  template <typename C> static char test(typeof(&C::no_destroy));
+  template <typename C> static char test(typeof(&C::no_destroy)); //#1
 #endif
-  template <typename C> static int32_t test(...);
+  template <typename C> static int32_t test(...); //#2
+  //如果T类型存在no_destroy，则函数匹配时将匹配到#1，函数调用的返回值为char类型，因此value值为true
+  //如果不存在no_destroy，则函数匹配到#2，函数调用的返回值为int32_t类型，因此value值为false
   const static bool value = sizeof(test<T>(0)) == 1;
 };
 }
@@ -57,6 +61,8 @@ class Singleton : boost::noncopyable
 
   static void destroy()
   {
+    //如果T只声明没有定义，则sizeof为0；如果T是不完全类型，则在编译期间提示错误
+    //error: size of array T_must_be_complete_type is negative
     typedef char T_must_be_complete_type[sizeof(T) == 0 ? -1 : 1];
     T_must_be_complete_type dummy; (void) dummy;
 

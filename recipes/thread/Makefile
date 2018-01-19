@@ -1,4 +1,4 @@
-CXXFLAGS=-g -Wall -rdynamic -march=native
+CXXFLAGS=-std=c++11 -g -Wall -rdynamic -march=native
 CXXFLAGS+=-O2
 
 HEADERS=$(wildcard *.h)
