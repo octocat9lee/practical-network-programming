@@ -3,6 +3,7 @@
 #include "../Thread.h"
 
 #include <boost/bind.hpp>
+#include <functional>
 #include <boost/ptr_container/ptr_vector.hpp>
 #include <string>
 #include <stdio.h>
@@ -21,7 +22,12 @@ class Test
       threads_.push_back(new muduo::Thread(
             boost::bind(&Test::threadFunc, this), std::string(name)));
     }
-    for_each(threads_.begin(), threads_.end(), boost::bind(&muduo::Thread::start, _1));
+    //for_each(threads_.begin(), threads_.end(), std::mem_fn(&muduo::Thread::start));
+    //threads_中每个对象将bind到muduo::Thread::start的第一个隐式实参即this指针上，this->start()
+    //for_each(threads_.begin(), threads_.end(), std::bind(&muduo::Thread::start, std::placeholders::_1));
+    std::function<void(muduo::Thread&)> fcn = &muduo::Thread::start; //执行成员函数的对象将被传给隐式的this形参
+    for_each(threads_.begin(), threads_.end(), fcn);
+    //for_each(threads_.begin(), threads_.end(), boost::bind(&muduo::Thread::start, _1));
   }
 
   void run(int times)
