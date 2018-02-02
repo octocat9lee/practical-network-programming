@@ -4,3 +4,25 @@
 *.vcxproj
 *.vcxproj.*
 
+#find . -type f -exec file {} + | grep "ELF*" | sed 's/^.\///g' | awk '{print $1}' | sed 's/://g' >> .gitignore
+recipes/thread/threadlocalsingleton_test
+recipes/thread/copyonwrite_test
+recipes/thread/self_deadlock
+recipes/thread/nonrecursivemutex_test
+recipes/thread/fork_test
+recipes/thread/atomic_unittest
+recipes/thread/threadlocal_test
+recipes/thread/thread_test
+recipes/thread/blockingqueue_test
+recipes/thread/mutual_deadlock
+recipes/thread/weakcallback_test
+recipes/thread/singleton_threadlocal_test
+recipes/thread/requestinventory_test
+recipes/thread/threadpool_test
+recipes/thread/waiter_test
+recipes/thread/requestinventory_test2
+recipes/thread/singleton_test
+recipes/thread/exit_deadlock
+recipes/thread/exception_test
+recipes/thread/signalslot_test
+recipes/thread/boundedblockingqueue_test
