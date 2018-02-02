@@ -11,7 +11,7 @@ template <typename RET, typename... ARGS>
 class SignalTrivial<RET(ARGS...)>
 {
  public:
-  typedef std::function<void (ARGS...)> Functor;
+  typedef std::function<RET(ARGS...)> Functor;
 
   void connect(Functor&& func)
   {

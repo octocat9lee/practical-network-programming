@@ -43,6 +43,9 @@ void threadFunc(const char* changeTo)
 
 int main()
 {
+  //http://blog.csdn.net/jnu_simba/article/details/14037869
+  //muduo::Singleton<muduo::ThreadLocal<Test> >::instance()保证不同线程调用返回的都是同一个ThreadLocal<Test>对象，
+  //而不同线程调用ThreadLocal<Test>.value(); 返回的是不同的Test对象，即在不同线程中各有一份实际数据
   muduo::ThreadLocalSingleton<Test>::instance().setName("main one");
   muduo::Thread t1(boost::bind(threadFunc, "thread1"));
   muduo::Thread t2(boost::bind(threadFunc, "thread2"));

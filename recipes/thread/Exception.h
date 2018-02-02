@@ -23,6 +23,9 @@ class Exception : public std::exception
   const char* stackTrace() const throw();
 
  private:
+  std::string demangle(const char* symbol);
+
+ private:
   std::string message_;
   std::string stack_;
 };

@@ -5,6 +5,9 @@
 //
 // Author: Shuo Chen (giantchen at gmail dot com)
 
+// more detail information: http://blog.csdn.net/cywosp/article/details/26469435
+// 使用单独的类对线程局部数据进行封装，每个变量使用一个独立的pthread_key_t
+
 #ifndef MUDUO_BASE_THREADLOCAL_H
 #define MUDUO_BASE_THREADLOCAL_H
 
