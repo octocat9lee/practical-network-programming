@@ -48,6 +48,7 @@ void MemcacheServer::stop()
 bool MemcacheServer::storeItem(const ItemPtr& item, const Item::UpdatePolicy policy, bool* exists)
 {
   assert(item->neededBytes() == 0);
+  // sharding reduces contention
   MutexLock& mutex = shards_[item->hash() % kShards].mutex;
   ItemMap& items = shards_[item->hash() % kShards].items;
   MutexLockGuard lock(mutex);

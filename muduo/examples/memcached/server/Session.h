@@ -79,6 +79,10 @@ class Session : boost::noncopyable,
     bool operator()(InputIterator& next, InputIterator end, Token& tok);
   };
 
+  // http://www.boost.org/doc/libs/1_64_0/libs/tokenizer/tokenizer.htm
+  // TokenizerFunc	The TokenizerFunction used to parse the sequence.
+  // Iterator	The type of the iterator the specifies the sequence.
+  // Type	The type of the token, typically string.
   typedef boost::tokenizer<SpaceSeparator,
       const char*,
       muduo::StringPiece> Tokenizer;

@@ -16,6 +16,7 @@ static bool isBinaryProtocol(uint8_t firstByte)
 const int kLongestKeySize = 250;
 string Session::kLongestKey(kLongestKeySize, 'x');
 
+//在该函数模板中，InputIterator为char*类型， Token为StringPiece类型
 template <typename InputIterator, typename Token>
 bool Session::SpaceSeparator::operator()(InputIterator& next, InputIterator end, Token& tok)
 {
@@ -219,7 +220,14 @@ bool Session::processRequest(StringPiece request)
   }
 
   SpaceSeparator sep;
-  Tokenizer tok(request.begin(), request.end(), sep);
+  Tokenizer tok(request.begin(), request.end(), sep); //tok保存按照空格分割完成的字符串
+  LOG_DEBUG << "============== request ====================";
+  for(Tokenizer::iterator it = tok.begin(); it != tok.end(); ++it)
+  {
+      LOG_DEBUG << *it;
+  }
+  LOG_DEBUG << "============== request ====================";
+
   Tokenizer::iterator beg = tok.begin();
   if (beg == tok.end())
   {
