@@ -37,6 +37,12 @@
 //
 // Arghh!  I wish C++ literals were automatically of type "string".
 
+// http://www.zhihu.com/question/34499426/answer/58891014
+// 为什么要有这个类?
+// C++里面有string和char*，如果你用const string &s做函数形参，可以同时兼容两种字符串。但当你传入一个很长的char*时，会生成一个较大的string对象，开销比较大。
+// 如果你的目的仅仅是读取字符串的值，用这个StringPiece的话，仅仅是4+一个指针的内存开销，而且也保证了兼容性。
+// 所以这个类的目的是传入字符串的字面值，它内部的ptr_ 这块内存不归他所有。所以不能做任何改动。
+
 #ifndef MUDUO_BASE_STRINGPIECE_H
 #define MUDUO_BASE_STRINGPIECE_H
 

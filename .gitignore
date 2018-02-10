@@ -3,6 +3,14 @@
 *.sln
 *.vcxproj
 *.vcxproj.*
+*.cmake
+*Makefile
+*CMakeCache.txt
+*CMakeFiles/
+
+build/
+Debug/
+x64/
 
 #find . -type f -exec file {} + | grep "ELF*" | sed 's/^.\///g' | awk '{print $1}' | sed 's/://g' >> .gitignore
 recipes/thread/threadlocalsingleton_test
@@ -26,3 +34,17 @@ recipes/thread/exit_deadlock
 recipes/thread/exception_test
 recipes/thread/signalslot_test
 recipes/thread/boundedblockingqueue_test
+
+recipes/tpc/bin/chargen
+recipes/tpc/bin/discard
+recipes/tpc/bin/echo
+recipes/tpc/bin/echo_client
+recipes/tpc/bin/footprint
+recipes/tpc/bin/netcat
+recipes/tpc/bin/nodelay
+recipes/tpc/bin/nodelay_server
+recipes/tpc/bin/roundtrip_udp
+recipes/tpc/bin/sender
+recipes/tpc/bin/sendoob
+recipes/tpc/bin/sudoku_stress
+recipes/tpc/bin/ttcp
