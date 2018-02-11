@@ -25,6 +25,12 @@
     <Filter Include="源文件\tpc\bin">
       <UniqueIdentifier>{8f874adb-69b8-465c-9fdc-b88db7c771f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\thread">
+      <UniqueIdentifier>{5fc6513a-91e7-48cb-abdf-5b3d3fabb832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\thread\tests">
+      <UniqueIdentifier>{6c787c24-9a97-4926-a9b5-2dfe03ef5778}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\recipes\tpc\include\Acceptor.h">
@@ -41,6 +47,51 @@
     </ClInclude>
     <ClInclude Include="..\..\recipes\tpc\include\TcpStream.h">
       <Filter>源文件\tpc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\Atomic.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\BlockingQueue.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\BoundedBlockingQueue.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\Condition.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\CountDownLatch.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\Exception.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\Mutex.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\SignalSlot.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\SignalSlotTrivial.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\Singleton.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\Thread.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\ThreadLocal.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\ThreadLocalSingleton.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\ThreadPool.h">
+      <Filter>源文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\recipes\thread\WeakCallback.h">
+      <Filter>源文件\thread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +145,102 @@
     </ClCompile>
     <ClCompile Include="..\..\recipes\tpc\bin\ttcp.cc">
       <Filter>源文件\tpc\bin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\Exception.cc">
+      <Filter>源文件\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\Thread.cc">
+      <Filter>源文件\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\ThreadPool.cc">
+      <Filter>源文件\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Atomic_unittest.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\BlockingQueue_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\BoundedBlockingQueue_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\CopyOnWrite_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Counter.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Customer.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\destruct.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Exception_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\ExitDeadLock.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Factory.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Factory_deadlock.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Factory_racecondition.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Fork_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\MutualDeadLock.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\NonRecursiveMutex_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Observer.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Observer_safe.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\RequestInventory_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\RequestInventory_test2.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\SelfDeadLock.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\SignalSlot_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Singleton_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\SingletonThreadLocal_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Thread_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\ThreadLocal_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\ThreadLocalSingleton_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\ThreadPool_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\Waiter_test.cc">
+      <Filter>源文件\thread\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\recipes\thread\test\WeakCallback_test.cc">
+      <Filter>源文件\thread\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

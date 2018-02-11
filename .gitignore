@@ -1,13 +1,15 @@
-*.swp
 .vs
-*.sln
-*.vcxproj
-*.vcxproj.*
+#*.sln
+#*.vcxproj
+#*.vcxproj.*
+
+*.swp
 *.cmake
 *Makefile
 *CMakeCache.txt
 *CMakeFiles/
 
+obj/
 build/
 Debug/
 x64/
