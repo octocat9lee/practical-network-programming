@@ -61,6 +61,25 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="..\..\http_asio\connection.cpp" />
+    <ClCompile Include="..\..\http_asio\io_service_pool.cpp" />
+    <ClCompile Include="..\..\http_asio\mime_types.cpp" />
+    <ClCompile Include="..\..\http_asio\posix_main.cpp" />
+    <ClCompile Include="..\..\http_asio\reply.cpp" />
+    <ClCompile Include="..\..\http_asio\request_handler.cpp" />
+    <ClCompile Include="..\..\http_asio\request_parser.cpp" />
+    <ClCompile Include="..\..\http_asio\server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\http_asio\connection.h" />
+    <ClInclude Include="..\..\http_asio\header.h" />
+    <ClInclude Include="..\..\http_asio\io_service_pool.h" />
+    <ClInclude Include="..\..\http_asio\mime_types.h" />
+    <ClInclude Include="..\..\http_asio\reply.h" />
+    <ClInclude Include="..\..\http_asio\request.h" />
+    <ClInclude Include="..\..\http_asio\request_handler.h" />
+    <ClInclude Include="..\..\http_asio\request_parser.h" />
+    <ClInclude Include="..\..\http_asio\server.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
