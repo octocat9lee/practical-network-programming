@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\recipes\thread\Atomic.h" />
+    <ClInclude Include="..\..\recipes\thread\BlockingQueue.h" />
+    <ClInclude Include="..\..\recipes\thread\BoundedBlockingQueue.h" />
+    <ClInclude Include="..\..\recipes\thread\Condition.h" />
+    <ClInclude Include="..\..\recipes\thread\CountDownLatch.h" />
+    <ClInclude Include="..\..\recipes\thread\Exception.h" />
+    <ClInclude Include="..\..\recipes\thread\Mutex.h" />
+    <ClInclude Include="..\..\recipes\thread\SignalSlot.h" />
+    <ClInclude Include="..\..\recipes\thread\SignalSlotTrivial.h" />
+    <ClInclude Include="..\..\recipes\thread\Singleton.h" />
+    <ClInclude Include="..\..\recipes\thread\Thread.h" />
+    <ClInclude Include="..\..\recipes\thread\ThreadLocal.h" />
+    <ClInclude Include="..\..\recipes\thread\ThreadLocalSingleton.h" />
+    <ClInclude Include="..\..\recipes\thread\ThreadPool.h" />
+    <ClInclude Include="..\..\recipes\thread\WeakCallback.h" />
+    <ClInclude Include="..\..\recipes\tpc\include\Acceptor.h" />
+    <ClInclude Include="..\..\recipes\tpc\include\Common.h" />
+    <ClInclude Include="..\..\recipes\tpc\include\InetAddress.h" />
+    <ClInclude Include="..\..\recipes\tpc\include\Socket.h" />
+    <ClInclude Include="..\..\recipes\tpc\include\TcpStream.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\recipes\thread\Exception.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Atomic_unittest.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\BlockingQueue_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\BoundedBlockingQueue_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\CopyOnWrite_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Counter.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Customer.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\destruct.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Exception_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\ExitDeadLock.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Factory.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Factory_deadlock.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Factory_racecondition.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Fork_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\MutualDeadLock.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\NonRecursiveMutex_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Observer.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Observer_safe.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\RequestInventory_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\RequestInventory_test2.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\SelfDeadLock.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\SignalSlot_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\SingletonThreadLocal_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Singleton_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\ThreadLocalSingleton_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\ThreadLocal_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\ThreadPool_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Thread_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\Waiter_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\test\WeakCallback_test.cc" />
+    <ClCompile Include="..\..\recipes\thread\Thread.cc" />
+    <ClCompile Include="..\..\recipes\thread\ThreadPool.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\chargen.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\discard.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\echo.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\echo_client.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\footprint.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\netcat.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\nodelay.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\nodelay_server.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\roundtrip_udp.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\sender.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\sendoob.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\sudoku_stress.cc" />
+    <ClCompile Include="..\..\recipes\tpc\bin\ttcp.cc" />
+    <ClCompile Include="..\..\recipes\tpc\lib\Acceptor.cc" />
+    <ClCompile Include="..\..\recipes\tpc\lib\InetAddress.cc" />
+    <ClCompile Include="..\..\recipes\tpc\lib\Socket.cc" />
+    <ClCompile Include="..\..\recipes\tpc\lib\TcpStream.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\recipes\tpc\bin\footprint.py" />
+    <None Include="..\..\recipes\tpc\Makefile" />
+    <None Include="..\..\recipes\tpc\README" />
+    <None Include="..\..\recipes\tpc\ttcp.pic" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9c63f027-852e-41ef-a3f9-8ca63764941e}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>recipes</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+  </ItemGroup>
+  <ItemDefinitionGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
