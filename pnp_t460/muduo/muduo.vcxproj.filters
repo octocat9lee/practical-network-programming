@@ -70,6 +70,30 @@
     <Filter Include="源文件\examples\memcached\server">
       <UniqueIdentifier>{766d7427-b758-4001-b13f-b7363ed1f908}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\examples\simple\allinone">
+      <UniqueIdentifier>{2707f3ff-e6cb-4be9-9333-234f91bd2c4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\chargen">
+      <UniqueIdentifier>{cc8f4ef1-99b4-48c9-ae47-c7c04d85e3cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\chargenclient">
+      <UniqueIdentifier>{a470b7ed-e37a-4f55-8aab-319ba6657fbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\daytime">
+      <UniqueIdentifier>{fe5580f2-9af4-410f-9d47-c89c0afe06fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\discard">
+      <UniqueIdentifier>{32d3c13e-10ed-428c-93d8-f4fa61728eb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\echo">
+      <UniqueIdentifier>{caef3415-a0e2-44ac-9dd6-f71f67a5107c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\time">
+      <UniqueIdentifier>{16e03baf-717a-4051-bf68-2d922fdabf5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\simple\timeclient">
+      <UniqueIdentifier>{a7e3a16d-9cc3-4bd3-80de-2be3db9d693f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\muduo\build.sh">
@@ -442,6 +466,45 @@
     <ClCompile Include="..\..\muduo\examples\memcached\server\Session.cc">
       <Filter>源文件\examples\memcached\server</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\allinone\allinone.cc">
+      <Filter>源文件\examples\simple\allinone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\chargen\chargen.cc">
+      <Filter>源文件\examples\simple\chargen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\chargen\main.cc">
+      <Filter>源文件\examples\simple\chargen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\chargenclient\chargenclient.cc">
+      <Filter>源文件\examples\simple\chargenclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\daytime\daytime.cc">
+      <Filter>源文件\examples\simple\daytime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\daytime\main.cc">
+      <Filter>源文件\examples\simple\daytime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\discard\discard.cc">
+      <Filter>源文件\examples\simple\discard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\discard\main.cc">
+      <Filter>源文件\examples\simple\discard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\echo\echo.cc">
+      <Filter>源文件\examples\simple\echo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\echo\main.cc">
+      <Filter>源文件\examples\simple\echo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\timeclient\timeclient.cc">
+      <Filter>源文件\examples\simple\timeclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\time\main.cc">
+      <Filter>源文件\examples\simple\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\simple\time\time.cc">
+      <Filter>源文件\examples\simple\time</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\muduo\muduo\base\AsyncLogging.h">
@@ -647,6 +710,21 @@
     </ClInclude>
     <ClInclude Include="..\..\muduo\examples\memcached\server\Session.h">
       <Filter>源文件\examples\memcached\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\simple\chargen\chargen.h">
+      <Filter>源文件\examples\simple\chargen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\simple\daytime\daytime.h">
+      <Filter>源文件\examples\simple\daytime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\simple\discard\discard.h">
+      <Filter>源文件\examples\simple\discard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\simple\echo\echo.h">
+      <Filter>源文件\examples\simple\echo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\simple\time\time.h">
+      <Filter>源文件\examples\simple\time</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
