@@ -94,6 +94,12 @@
     <Filter Include="源文件\examples\simple\timeclient">
       <UniqueIdentifier>{a7e3a16d-9cc3-4bd3-80de-2be3db9d693f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\examples\socks4a">
+      <UniqueIdentifier>{0f3fb2ee-f3d3-41d6-9019-8193fe5e1f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\sudoku">
+      <UniqueIdentifier>{58ec0868-6aaf-46c0-96d3-160fe5e4ad0d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\muduo\build.sh">
@@ -166,6 +172,12 @@
     </Text>
     <Text Include="..\..\muduo\examples\memcached\server\CMakeLists.txt">
       <Filter>源文件\examples\memcached\server</Filter>
+    </Text>
+    <Text Include="..\..\muduo\examples\socks4a\CMakeLists.txt">
+      <Filter>源文件\examples\socks4a</Filter>
+    </Text>
+    <Text Include="..\..\muduo\examples\sudoku\CMakeLists.txt">
+      <Filter>源文件\examples\sudoku</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
@@ -505,6 +517,45 @@
     <ClCompile Include="..\..\muduo\examples\simple\time\time.cc">
       <Filter>源文件\examples\simple\time</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\socks4a\balancer.cc">
+      <Filter>源文件\examples\socks4a</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\socks4a\socks4a.cc">
+      <Filter>源文件\examples\socks4a</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\socks4a\tcprelay.cc">
+      <Filter>源文件\examples\socks4a</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\batch.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\loadtest.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\pipeline.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\server_basic.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\server_hybrid.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\server_multiloop.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\server_prod.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\server_threadpool.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\stat_unittest.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\sudoku\sudoku.cc">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\muduo\muduo\base\AsyncLogging.h">
@@ -725,6 +776,18 @@
     </ClInclude>
     <ClInclude Include="..\..\muduo\examples\simple\time\time.h">
       <Filter>源文件\examples\simple\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\socks4a\tunnel.h">
+      <Filter>源文件\examples\socks4a</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\sudoku\percentile.h">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\sudoku\stat.h">
+      <Filter>源文件\examples\sudoku</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\sudoku\sudoku.h">
+      <Filter>源文件\examples\sudoku</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
