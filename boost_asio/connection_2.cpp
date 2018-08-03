@@ -1,20 +1,25 @@
-//https://blog.csdn.net/csfreebird/article/details/8498185
+//https://blog.csdn.net/csfreebird/article/details/8498557
+//https://blog.csdn.net/csfreebird/article/details/8499339
 
 #include <cstdlib>
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
+#include <boost/function.hpp>
+#include <boost/enable_shared_from_this.hpp>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 using namespace boost;
 using namespace boost::asio;
 using ip::tcp;
-using boost::system::error_code;
 
-class Connection
+class Connection : public boost::enable_shared_from_this<Connection>
 {
 public:
-    Connection(io_service& s) : socket(s)
+    Connection(io_service& s) :
+        socket(s),
+        read_buffer_(1, 0)
     {
 
     }
@@ -28,10 +33,37 @@ public:
     void StartWork()
     {
         cout << "The new connection object is starting now." << endl;
+        // ERROR: 即便 shared_ptr 的引用计数为 0 导致析勾函数被调用，
+        // 而 this 指针由于被 bind_t 保存，所以 asio 框架仍然能够调用
+        // 到这个被删除的对象的成员函数
+        async_read(socket, buffer(read_buffer_),
+            boost::bind(&Connection::AfterReadChar, shared_from_this(), _1));
+    }
+
+    void AfterReadChar(const boost::system::error_code &ec)
+    {
+        if(ec)
+        {
+            cout << "error: " << ec.message() << endl;
+            return;
+        }
+
+        char x = read_buffer_[0];
+        if(x == 'a')
+        {
+            cout << "correct data received" << endl;
+        }
+        else
+        {
+            cout << "wrong data received, char is: " << (int)x << endl;
+        }
     }
 
 public:
     tcp::socket socket;
+
+private:
+    vector<char> read_buffer_;
 };
 
 class Server
@@ -65,7 +97,7 @@ public:
         io_.run();
     }
 
-    void AfterAccept(shared_ptr<Connection>& c, error_code const& ec)
+    void AfterAccept(shared_ptr<Connection>& c, const boost::system::error_code& ec)
     {
         // Check whether the server was stopped by a signal before this completion
         // handler had a chance to run.
