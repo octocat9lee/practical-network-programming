@@ -64,11 +64,19 @@
     <Text Include="..\..\boost_asio\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\boost_asio\Connection.cpp" />
+    <ClCompile Include="..\..\boost_asio\Connections.cpp" />
     <ClCompile Include="..\..\boost_asio\connection_1.cpp" />
     <ClCompile Include="..\..\boost_asio\connection_2.cpp" />
+    <ClCompile Include="..\..\boost_asio\connection_5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\boost_asio\build.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\boost_asio\Connection.h" />
+    <ClInclude Include="..\..\boost_asio\Connections.h" />
+    <ClInclude Include="..\..\boost_asio\Server.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

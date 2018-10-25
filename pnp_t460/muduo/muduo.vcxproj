@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\muduo\CMakeLists.txt" />
+    <Text Include="..\..\muduo\examples\asio\chat\CMakeLists.txt" />
+    <Text Include="..\..\muduo\examples\idleconnection\CMakeLists.txt" />
     <Text Include="..\..\muduo\examples\memcached\client\CMakeLists.txt" />
     <Text Include="..\..\muduo\examples\memcached\server\CMakeLists.txt" />
     <Text Include="..\..\muduo\examples\procmon\CMakeLists.txt" />
@@ -93,6 +95,15 @@
     <Text Include="..\..\muduo\muduo\net\tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\client.cc" />
+    <ClCompile Include="..\..\muduo\examples\asio\chat\loadtest.cc" />
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server.cc" />
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server_threaded.cc" />
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server_threaded_efficient.cc" />
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server_threaded_highperformance.cc" />
+    <ClCompile Include="..\..\muduo\examples\idleconnection\echo.cc" />
+    <ClCompile Include="..\..\muduo\examples\idleconnection\main.cc" />
+    <ClCompile Include="..\..\muduo\examples\idleconnection\sortedlist.cc" />
     <ClCompile Include="..\..\muduo\examples\memcached\client\bench.cc" />
     <ClCompile Include="..\..\muduo\examples\memcached\server\footprint_test.cc" />
     <ClCompile Include="..\..\muduo\examples\memcached\server\Item.cc" />
@@ -220,6 +231,8 @@
     <ClCompile Include="..\..\muduo\muduo\net\TimerQueue.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\muduo\examples\asio\chat\codec.h" />
+    <ClInclude Include="..\..\muduo\examples\idleconnection\echo.h" />
     <ClInclude Include="..\..\muduo\examples\memcached\server\Item.h" />
     <ClInclude Include="..\..\muduo\examples\memcached\server\MemcacheServer.h" />
     <ClInclude Include="..\..\muduo\examples\memcached\server\Session.h" />

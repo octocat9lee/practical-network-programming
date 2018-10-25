@@ -100,6 +100,15 @@
     <Filter Include="源文件\examples\sudoku">
       <UniqueIdentifier>{58ec0868-6aaf-46c0-96d3-160fe5e4ad0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\examples\asio">
+      <UniqueIdentifier>{0e46183f-d2ac-42da-948e-ccfcb4fc02f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\asio\chat">
+      <UniqueIdentifier>{2e7f148b-add8-4263-8ff1-c7e617295bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\examples\idleconnection">
+      <UniqueIdentifier>{d6379feb-5c5f-4188-901d-7bdd50b56c45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\muduo\build.sh">
@@ -178,6 +187,12 @@
     </Text>
     <Text Include="..\..\muduo\examples\sudoku\CMakeLists.txt">
       <Filter>源文件\examples\sudoku</Filter>
+    </Text>
+    <Text Include="..\..\muduo\examples\asio\chat\CMakeLists.txt">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </Text>
+    <Text Include="..\..\muduo\examples\idleconnection\CMakeLists.txt">
+      <Filter>源文件\examples\idleconnection</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
@@ -556,6 +571,33 @@
     <ClCompile Include="..\..\muduo\examples\sudoku\sudoku.cc">
       <Filter>源文件\examples\sudoku</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\client.cc">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\loadtest.cc">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server.cc">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server_threaded.cc">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server_threaded_efficient.cc">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\asio\chat\server_threaded_highperformance.cc">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\idleconnection\echo.cc">
+      <Filter>源文件\examples\idleconnection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\idleconnection\main.cc">
+      <Filter>源文件\examples\idleconnection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\muduo\examples\idleconnection\sortedlist.cc">
+      <Filter>源文件\examples\idleconnection</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\muduo\muduo\base\AsyncLogging.h">
@@ -788,6 +830,12 @@
     </ClInclude>
     <ClInclude Include="..\..\muduo\examples\sudoku\sudoku.h">
       <Filter>源文件\examples\sudoku</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\asio\chat\codec.h">
+      <Filter>源文件\examples\asio\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\muduo\examples\idleconnection\echo.h">
+      <Filter>源文件\examples\idleconnection</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
