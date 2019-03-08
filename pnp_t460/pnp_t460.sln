@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "http_asio", "http_asio\http
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boost_asio", "boost_asio\boost_asio.vcxproj", "{FF16CA5B-F3E7-4648-9533-394AA8E4F24D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_cpp", "asio_cpp\asio_cpp.vcxproj", "{D88F9C84-0A3B-4830-9CF4-15626583AE93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -69,6 +71,18 @@ Global
 		{FF16CA5B-F3E7-4648-9533-394AA8E4F24D}.Release|x64.Build.0 = Release|x64
 		{FF16CA5B-F3E7-4648-9533-394AA8E4F24D}.Release|x86.ActiveCfg = Release|x86
 		{FF16CA5B-F3E7-4648-9533-394AA8E4F24D}.Release|x86.Build.0 = Release|x86
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Debug|ARM.Build.0 = Debug|ARM
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Debug|x64.ActiveCfg = Debug|x64
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Debug|x64.Build.0 = Debug|x64
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Debug|x86.ActiveCfg = Debug|x86
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Debug|x86.Build.0 = Debug|x86
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Release|ARM.ActiveCfg = Release|ARM
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Release|ARM.Build.0 = Release|ARM
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Release|x64.ActiveCfg = Release|x64
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Release|x64.Build.0 = Release|x64
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Release|x86.ActiveCfg = Release|x86
+		{D88F9C84-0A3B-4830-9CF4-15626583AE93}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

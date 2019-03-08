@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 2.6)
+
+SET(BOOST_INSTALL_PATH /home/zhoul/install/boost_1_59_0)
+SET(CMAKE_CXX_COMPILER "g++")
+SET(CXX_FLAGS
+ -g
+ -Wall
+)
+
+STRING(REPLACE ";" " " CMAKE_CXX_FLAGS "${CXX_FLAGS}")
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+SET(BOOST_LIBS libboost_system.so libboost_thread.so)
+
+INCLUDE_DIRECTORIES(${BOOST_INSTALL_PATH}/include)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR})
+LINK_DIRECTORIES(${BOOST_INSTALL_PATH}/lib)
+
+ADD_EXECUTABLE(Connecting_a_socket Connecting_a_socket.cpp)
+TARGET_LINK_LIBRARIES(Connecting_a_socket ${BOOST_LIBS})
